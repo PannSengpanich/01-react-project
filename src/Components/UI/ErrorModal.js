@@ -30,15 +30,14 @@ function ErrorModal(props) {
     <React.Fragment>
       {ReactDOM.createPortal(
         <Backdrop onConfirm={onCloseErrorModal}></Backdrop>,
-        document.querySelector("#backdrop"),
+        document.querySelector("#backdrop")
       )}
       {ReactDOM.createPortal(
         <Modal
           title={props.title}
           message={props.message}
-          onConfirm={onCloseErrorModal}
-        ></Modal>,
-        document.querySelector("#modal"),
+          onConfirm={onCloseErrorModal}></Modal>,
+        document.querySelector("#modal")
       )}
     </React.Fragment>
   );
